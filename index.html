@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<title>Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
+<link rel="stylesheet" href="style.css">
+
+<style>		
+	.loader_bg {
+		position: fixed;
+		z-index:999999;
+		background: #fff url("image/loading.gif") no-repeat center;		
+		width: 100%;
+		height: 100%;
+		position: absolute; 
+		top: 50px;
+		left: calc(50vw- 75px);
+	}
+	
+	.loader {
+		border: 0 solid transparent;
+		border-radius: 50%;
+		width: 150px
+	}
+	
+	.loader:before, .loader:after{
+		content: '';
+		border: lem solid #ff5733;
+		border-radius: 50%;
+		width: inherit;
+		position: absolute;
+		top: 0;
+		left: 0;
+		animation: loader 2s linear infinite;
+		opacity:0;
+	}
+	
+	.loader:before{
+		animation-delay: .5s;
+	}
+	
+	@keyframes loader{
+		0%{
+			transform: scale(0);
+			opacity:0;
+		}
+		50%{
+			opacity:1;
+		}
+		100%{
+			transform: scale(1);
+			opacity:0;
+		}
+	}
+				
+	.clock{
+		position: absolute;
+		top:75%;
+		left:50%;
+		transform: translateX(-50%) translateY(-50%);
+		color: black;
+		font-size:50px;
+		font-family: 'Consolas';
+		text-align: center;
+		background:white;
+	}
+		
+	*{
+	margin:0px;
+	padding:0px
+	box-sizing: border-box;
+	}
+
+	nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height:8vh;
+	background-color:#5D4954;
+	font-family: 'Poppins', sans-serif;
+	}
+
+	.logo{
+	color: rgb(226,226,226);
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 20px;
+	}
+
+	.nav-links{
+	display: flex;
+	justify-content: space-around;
+	width: 30%;
+	}
+
+	.nav-links li{
+	list-style:none;
+	}
+
+	.nav-links a{
+	color:rgb(226,226,226);
+	text-decoration: none;
+	letter-spacing:0px;
+	font-weight: bold;
+	font-size:14px;
+	}
+	h5 {
+		color: #FF0077;
+		letter-spacing: .4rem;
+		font-size: 1.6rem;
+		line-height: 1.875;
+		margin-bottom: 0.3rem;
+		}
+		
+	.intro {
+		padding-top: 180px;
+		padding-right: 30px;
+		padding-bottom: 0px;
+		padding-left: 80px;
+		text-align: center;
+		margin-bottom: 3.6rem;
+		position: relative;
+	}
+	h1 {
+	font-family: "Poppins";
+	font-size: 3.6rem;
+	color: #313131;
+	line-height: 1.25;
+	margin-bottom: 1.2rem;
+	}
+	
+	body, html {height: 100%}
+	
+	p,h5,h1 {
+		text-align: center;
+	}
+	
+	.intro
+	{
+	font-family: "Lora", serif;
+	font-size: 1.7rem;
+	line-height: 2.4rem;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	color: black;
+	text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+	}
+	
+	body{
+	background-image: url('image/background.jpg');
+	min-height: 100%;
+	background-position: center;
+	background-size: cover;
+	opacity: .85;
+	}
+	
+
+		
+</style>
+</head>
+
+<body>
+<div class="loader_bg">
+	<div class="loader"></div>
+</div>
+
+<!-- Navbar (sit on top) -->
+<nav>
+		<div class="logo">
+			<h4>Portfolio :)</h4>
+		</div>
+		<ul class="nav-links">
+			<li>
+				<a href="index.html">Home</a>
+			</li>
+			<li>
+				<a href="aboutme2.html">About</a>
+			</li>
+			<li>
+				<a href="education.html">Education</a>
+			</li>
+			<li>	
+				<a href="skills.html">Skills</a>
+			</li>
+			<li>
+				<a href="feedback.html">Feedback</a>
+			</li>
+		</ul>
+	</nav>
+
+<div>
+  <div>
+  </div>
+  <div class="intro">
+    <h5>Hello World!</h5>
+	<h1><strong>I'm Ahda Nazihah</strong></h1>
+		<span><strong>Student | CS2304B2</strong></span>
+  </div>
+  <div>
+  </div>
+</div>
+
+<div id= "MyClockDisplay" class="clock"></div>
+	<script type="text/javascript">
+		function showTime(){
+			var date = new Date(); 
+			var h=date.getHours(); 
+			var m=date.getMinutes();
+			var s=date.getSeconds();
+			var session="AM";
+			if(h==0){
+				h=12;
+			}
+			
+			if(h>12){
+				h=h-12;
+				session="PM";
+			}
+			h= (h<10) ? "0" +h : h;
+			m= (m<10) ? "0" +m : m;
+			s= (s<10) ? "0" +s : s;
+			
+			var time =h + ":" + m + ":" + s +" " + session;
+			document.getElementById("MyClockDisplay").innerText=time;
+			document.getElementById("MyClockDisplay").innerContent=time;
+			
+			setTimeout(showTime,1000);
+		}
+		
+		showTime();		
+	
+	</script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script>
+			setTimeout(function(){
+				$('.loader_bg').fadeToggle();
+			}, 1500);
+	</script>		
+</body>
+</html>

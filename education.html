@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Education</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+		
+	</head>
+	
+	<style>
+	.loader_bg {
+		position: fixed;
+		z-index:999999;
+		background: #fff url("image/loading.gif") no-repeat center;		
+		width: 100%;
+		height: 100%;
+		position: absolute; 
+		top: 50px;
+		left: calc(50vw- 75px);
+	}
+	
+	.loader {
+		border: 0 solid transparent;
+		border-radius: 50%;
+		width: 150px
+	}
+	
+	.loader:before, .loader:after{
+		content: '';
+		border: lem solid #ff5733;
+		border-radius: 50%;
+		width: inherit;
+		position: absolute;
+		top: 0;
+		left: 0;
+		animation: loader 2s linear infinite;
+		opacity:0;
+	}
+	
+	.loader:before{
+		animation-delay: .5s;
+	}
+	
+	@keyframes loader{
+		0%{
+			transform: scale(0);
+			opacity:0;
+		}
+		50%{
+			opacity:1;
+		}
+		100%{
+			transform: scale(1);
+			opacity:0;
+		}
+	}
+	
+	.timeline {
+	position: relative;
+	margin: 50px auto;
+	padding: 0 0;
+	width:1000px;
+	box-sizing: border-box;
+	}
+	
+	.timeline:before
+	{
+		content: '';
+		position: absolute;
+		left:50%
+		width: 2px;
+		height:100%;
+		background: #c5c5c5;
+	}
+	
+	.timeline ul 
+	{
+		margin:0;
+		padding:0;
+	}
+	
+	.timeline ul li{
+		list-style: none;
+		position: relative;
+		width: 50%;
+		padding: 20px 40px;
+		box-sizing: border-box;
+	}
+	
+	.timeline ul li:nth-child(odd)
+	{
+		float: left;
+		text-align:right;
+		clear:both;
+	}
+	
+	.timeline ul li:nth-child(even)
+	{
+		float: right;
+		text-align:left;
+		clear:both;
+	}
+	
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: "Raleway";
+	}
+	
+	.content{
+		padding-bottom: 20px;
+	}
+	
+	.timeline ul li:nth-child(odd):before
+	{
+		content:'';
+		position:absolute;
+		top:27px;
+		right: -6px;
+		width:10px;
+		height:10px;
+		background: rgba(233,33,99,1);
+		border-radius: 50%;
+		box-shadow:0 0 0 3px rgba(233,33,99,0.2);
+	}
+		
+	.timeline ul li:nth-child(even):before
+	{
+		content:'';
+		position:absolute;
+		top:27px;
+		left: -4px;
+		width:10px;
+		height:10px;
+		background: rgba(233,33,99,1);
+		border-radius: 50%;
+		box-shadow:0 0 0 3px rgba(233,33,99,0.2);
+	}
+	
+	.timeline ul li h5
+	{
+		margin: 0;
+		padding-bottom:0;
+		font-weight: 600;
+		color: rgba(233,33,99,1);
+	}
+	
+	.timeline ul li p
+	{
+		margin: 10px 0 0;
+		padding:0;
+	}
+	
+	.timeline ul li:nth-child(odd) .time
+	{
+		position: absolute;
+		top: 12px;
+		right:-250px;
+		margin:0;
+		padding: 8px 16px;
+		background: rgba(233,33,99,1);
+		color: #ffff;
+		border-radius: 18px;
+		box-shadow: 0 0 0 3px rgba(233,33,99,1);
+	}
+	
+	.timeline ul li:nth-child(even) .time
+	{
+		position: absolute;
+		top: 12px;
+		left:-250px;
+		margin:0;
+		padding: 8px 16px;
+		background: rgba(233,33,99,1);
+		color: #ffff;
+		border-radius: 18px;
+		box-shadow: 0 0 0 3px rgba(233,33,99,1);
+	}
+	
+	.timeline ul li .time h4
+	{
+
+		margin:0;
+		padding: 0;
+		font-size:14px;
+	}
+	
+	body {
+	background-image: url('image/background.jpg');
+	min-height: 100%;
+	background-position: center;
+	background-size: cover;
+	}	
+*{
+	margin:0px;
+	padding:0px
+	box-sizing: border-box;
+}
+
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height:8vh;
+	background-color:#5D4954;
+	font-family: 'Poppins', sans-serif;
+}
+
+.logo{
+	color: rgb(226,226,226);
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 20px;
+}
+
+.nav-links{
+	display: flex;
+	justify-content: space-around;
+	width: 30%;
+}
+
+.nav-links li{
+	list-style:none;
+}
+
+.nav-links a{
+	color:rgb(226,226,226);
+	text-decoration: none;
+	letter-spacing:0px;
+	font-weight: bold;
+	font-size:14px;
+}
+*{
+	margin:0px;
+	padding:0px
+	box-sizing: border-box;
+}
+
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height:8vh;
+	background-color:#5D4954;
+	font-family: 'Poppins', sans-serif;
+}
+
+.logo{
+	color: rgb(226,226,226);
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 20px;
+}
+
+.nav-links{
+	display: flex;
+	justify-content: space-around;
+	width: 30%;
+}
+
+.nav-links li{
+	list-style:none;
+}
+
+.nav-links a{
+	color:rgb(226,226,226);
+	text-decoration: none;
+	letter-spacing:0px;
+	font-weight: bold;
+	font-size:14px;
+}
+
+h5 {
+	color: #FF0077;
+	letter-spacing: .4rem;
+	font-size: 1.6rem;
+	line-height: 1.875;
+	margin-bottom: 0.3rem;
+	text-align: center;
+	padding-top:0px;
+	
+}
+
+h1 {
+	font-family: "Poppins";
+	font-size: 1.6rem;
+	color: #313131;
+	line-height: 1.25;
+	margin-bottom: 1.2rem;
+	text-align: center;
+	}
+	
+	.aboutme {
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-left: 80px; 
+}
+	</style>
+	
+
+
+<body>
+<div class="loader_bg">
+	<div class="loader"></div>
+</div>
+<nav>
+		<div class="logo">
+			<h4>portfolio:)</h4>
+		</div>
+		<ul class="nav-links">
+			<li>
+				<a href="index.html">Home</a>
+			</li>
+			<li>
+				<a href="aboutme2.html">About</a>
+			</li>
+			<li>
+				<a href="education.html">Education</a>
+			</li>
+			<li>	
+				<a href="skills.html">Skills</a>
+			</li>
+			<li>
+				<a href="feedback.html">Feedback</a>
+			</li>
+		</ul>
+	</nav>
+<div class="aboutme">
+	<h5><strong>Education<strong></h5>
+	<h1>from high school to university</h1>
+</div>
+
+<div class="timeline">
+	<ul>
+		<li>
+			<div class="content">
+				<h5>Universiti Teknologi MARA </h5>
+				<p>Currently in Semester 4 in Bachelor of Computer Science (Hons.) in Kuala Terengganu Campus</p>
+			</div>
+			<div class="time">
+				<h4>August 2018~present</h4>
+			</div>
+		</li>
+		<li>
+			<div class="content">
+				<h5>Negeri Sembilan Matriculation College</h5>
+				<p>Attended for a year. Took Module 3 which consists Computer Science, Biology, Mathematics and Chemistry. Meeting a lot of good people and had a good time there! <3</p>
+			</div>
+			<div class="time">
+				<h4>June 2017~May 2018</h4>
+			</div>
+		</li>		
+		<li>
+			<div class="content">
+				<h5>SMK Belara</h5>
+				<p>Studied there for 5 years. Got 1A 4A- 1B 2C+ and 1C (Science stream)</p>
+			</div>
+			<div class="time">
+				<h4>January 2012~ 2016</h4>
+			</div>
+		</li>
+		<div style="clear: both;"></div>
+	</ul>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script>
+			setTimeout(function(){
+				$('.loader_bg').fadeToggle();
+			}, 1500);
+	</script>
+
+
+
+</body>
+</html>

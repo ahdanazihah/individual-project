@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About me</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="style.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<style>
+	.loader_bg {
+		position: fixed;
+		z-index:999999;
+		background: #fff url("image/loading.gif") no-repeat center;	
+		width: 100%;
+		height: 100%;
+		position: absolute; 
+		top: 50px;
+		left: calc(50vw- 75px);
+	}
+	
+	.loader {
+		border: 0 solid transparent;
+		border-radius: 50%;
+		width: 150px
+	}
+	
+	.loader:before, .loader:after{
+		content: '';
+		border: lem solid #ff5733;
+		border-radius: 50%;
+		width: inherit;
+		position: absolute;
+		top: 0;
+		left: 0;
+		animation: loader 2s linear infinite;
+		opacity:0;
+	}
+	
+	.loader:before{
+		animation-delay: .5s;
+	}
+	
+	@keyframes loader{
+		0%{
+			transform: scale(0);
+			opacity:0;
+		}
+		50%{
+			opacity:1;
+		}
+		100%{
+			transform: scale(1);
+			opacity:0;
+		}
+	}
+.leftside, .rightside {
+	height:100vh;
+	width:100%;
+}
+
+.details {
+  padding-top: -20px;
+  padding-right: 30px;
+  padding-bottom: 100px;
+  padding-left: 250px;
+}
+
+h5 {
+	color: #FF0077;
+	letter-spacing: .4rem;
+	font-size: 1.6rem;
+	line-height: 1.875;
+	margin-bottom: 0rem;
+	text-align: center;
+	padding-top:0px;
+	
+}
+
+h1 {
+	font-family: "Poppins";
+	font-size: 3.6rem;
+	color: #313131;
+	line-height: 1.25;
+	margin-bottom: 1.2rem;
+	text-align: center;
+	}
+
+img {
+	height: 9rem;
+	width: 9rem;
+	border-radius: 50%;
+	margin: .9rem 0 0 0;
+	float: left;
+}
+
+.aboutme {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 0px;
+  padding-left: 80px; 
+}
+
+.profile {
+  padding-top: 50px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 265px;
+  background:pink;
+  border-radius: 18px;
+}
+
+.info-list li span {
+	display: block;
+	font-family: 'Poppins';
+	color:black;
+	font-size: 16px;
+	line-height: 1;
+}
+
+.info-list {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 150px;
+}
+
+.info-list li strong {
+	font-family: 'Poppins';
+	color: #ffff;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	font-size: 18px;
+	line-height: 3rem;
+}
+
+	body {
+	background-image: url('image/background.jpg');
+	min-height: 100%;
+	background-position: center;
+	background-size: cover;
+	}
+
+*{
+	margin:0px;
+	padding:0px
+	box-sizing: border-box;
+}
+
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height:8vh;
+	background-color:#5D4954;
+	font-family: 'Poppins', sans-serif;
+}
+
+.logo{
+	color: rgb(226,226,226);
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 20px;
+}
+
+.nav-links{
+	display: flex;
+	justify-content: space-around;
+	width: 30%;
+}
+
+.nav-links li{
+	list-style:none;
+}
+
+.nav-links a{
+	color:rgb(226,226,226);
+	text-decoration: none;
+	letter-spacing:0px;
+	font-weight: bold;
+	font-size:14px;
+}	
+
+
+</style>
+</head>
+<body>
+<div class="loader_bg">
+	<div class="loader"></div>
+</div>
+<nav>
+		<div class="logo">
+			<h4>portfolio:)</h4>
+		</div>
+		<ul class="nav-links">
+			<li>
+				<a href="index.html">Home</a>
+			</li>
+			<li>
+				<a href="aboutme2.html">About</a>
+			</li>
+			<li>
+				<a href="education.html">Education</a>
+			</li>
+			<li>	
+				<a href="skills.html">Skills</a>
+			</li>
+			<li>
+				<a href="feedback.html">Feedback</a>
+			</li>
+		</ul>
+	</nav>
+
+<div class="aboutme">
+	<h5><strong>About Me<strong></h5>
+	<h1>Let me introduce myself</h1>
+</div>
+
+	<div class="row no-gutters">	
+		<div class="col no-gutters">
+			<div class="leftside">
+				<div class="details">
+					<img src="image/myself.jpg" alt="Profile Picture">
+				</div> 
+				<div class="profile">
+					<h3>PROFILE<h3>
+				</div>
+				<ul class="info-list">
+   				<li>
+   					<strong>Fullname:</strong>
+   					<span>Nur Ahda Nazihah binti Ahmad</span>
+   				</li>
+				<li>
+   					<strong>Birth Date:</strong>
+   					<span>20th March 1999</span>
+   				</li>
+				<li>
+   					<strong>Email:</strong>
+   					<span>ahdanazihah@gmail.com</span>
+   				</li>
+				<li>
+   					<strong>Address:</strong>
+   					<span>LOT9878, Kampung Pulau Manis, 21210, Kuala Terengganu</span>
+   				</li>
+				<li>
+   					<strong>Family:</strong>
+   					<span>5 (consists of my father,mother,older brother and older sister)</span>
+   				</li>
+				<iframe src="https://open.spotify.com/embed/playlist/37i9dQZEVXbJlfUljuZExa" width="500" height="100" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+			</div>
+			
+	</div>
+	
+	<div class="col no-gutters">
+			<div class="rightside">
+			<div class="profile">
+					<h4>INTERESTS</h4>
+			</div>
+			<ul class="info-list">
+   				<li>
+   					<strong>Hobby:</strong>
+   					<span>Watching dramas and TV Shows</span>
+   				</li>
+				<li>
+   					<strong>Positive traits in myself:</strong>
+   					<span>I am passionate on thing that I work on plus I am good in problem solving</span>
+   				</li>
+   				<li>
+   					<strong>Things I like the most:</strong>
+   					<span>Dramas, TV Shows and music</span>
+   				</li>				
+   				<li>
+   					<strong>TV Show Recommendation:</strong>
+   					<iframe width="500" height="315" src="https://www.youtube.com/embed/b9EkMc79ZSU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   				</li>	
+			</div>
+			
+		</div>
+	</div>
+
+	</script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script>
+			setTimeout(function(){
+				$('.loader_bg').fadeToggle();
+			}, 1500);
+	</script>
+</body>
+</html>

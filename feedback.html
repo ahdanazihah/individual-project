@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Feedback Form</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<style>
+body {
+	margin:0;
+	padding:0;
+	background-image: url('image/background.jpg');
+	min-height: 100%;
+	background-position: center;
+	background-size: cover;
+}
+
+.feedback-form{
+	width:85%;
+	max-width:800px;
+	max-height:500px;
+	background:#f1f1f1;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	border-radius: 8px;
+	text-align: center;
+	box-shadow: 0 0 20px #000000b3;
+	font-family: "Monserrat" sans-serif;
+	padding-top: 100px;
+}
+
+.feedback-form h1{
+	margin-top:0;
+	font-weight: 200;
+}
+
+.txtb{
+	border: 1px solid gray;
+	margin: 8px 0;
+	padding: 5px 18px;
+	border-radius: 8px;
+}
+
+.txtb label {
+	display: block;
+	text-align: left;
+	color: #333;
+	text-transform: uppercase;
+	fotn-size: 14px;
+}
+
+.txtb input, .txtb textarea{
+	width: 100%;
+	border: none;
+	background: none;
+	outline: none;
+	font-size: 18px;
+	margin-top: 6px;	
+}	
+
+.btn{
+	display: inline-block;
+	background: #9b59b6;
+	padding: 14px 0;
+	color: white;
+	text-transform: uppercase;
+	cursor: pointer;
+	margin-top:8px;
+	width: 100%;
+	transition-duration: 0.4s;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+*{
+	margin:0px;
+	padding:0px
+	box-sizing: border-box;
+}
+
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height:8vh;
+	background-color:#5D4954;
+	font-family: 'Poppins', sans-serif;
+}
+
+.logo{
+	color: rgb(226,226,226);
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 20px;
+}
+
+.nav-links{
+	display: flex;
+	justify-content: space-around;
+	width: 30%;
+}
+
+.nav-links li{
+	list-style:none;
+}
+
+.nav-links a{
+	color:rgb(226,226,226);
+	text-decoration: none;
+	letter-spacing:0px;
+	font-weight: bold;
+	font-size:14px;
+}
+
+.loader_bg {
+		position: fixed;
+		z-index:999999;
+		background: #fff url("image/loading.gif") no-repeat center;		
+		width: 100%;
+		height: 100%;
+		position: absolute; 
+		top: 50px;
+		left: calc(50vw- 75px);
+	}
+	
+	.loader {
+		border: 0 solid transparent;
+		border-radius: 50%;
+		width: 150px
+	}
+	
+	.loader:before, .loader:after{
+		content: '';
+		border: lem solid #ff5733;
+		border-radius: 50%;
+		width: inherit;
+		position: absolute;
+		top: 0;
+		left: 0;
+		animation: loader 2s linear infinite;
+		opacity:0;
+	}
+	
+	.loader:before{
+		animation-delay: .5s;
+	}
+	
+	@keyframes loader{
+		0%{
+			transform: scale(0);
+			opacity:0;
+		}
+		50%{
+			opacity:1;
+		}
+		100%{
+			transform: scale(1);
+			opacity:0;
+		}
+	}
+</style>	
+<body>
+<div class="loader_bg">
+	<div class="loader"></div>
+</div>
+<nav>
+		<div class="logo">
+			<h4>portfolio:)</h4>
+		</div>
+		<ul class="nav-links">
+			<li>
+				<a href="index.html">Home</a>
+			</li>
+			<li>
+				<a href="aboutme2.html">About</a>
+			</li>
+			<li>
+				<a href="education.html">Education</a>
+			</li>
+			<li>	
+				<a href="skills.html">Skills</a>
+			</li>
+			<li>
+				<a href="feedback.php">Feedback</a>
+			</li>
+		</ul>
+	</nav>
+
+<div class="feedback-form">
+	<h1>Feedback Form</h1>
+	<div class="txtb">
+		<label>Full Name: </label>
+		<input type="text" name="" value="" placeholder="Enter your name">
+	</div>
+	<div class="txtb">
+		<label>Email: </label>
+		<input type="email" name="" value="" placeholder="Enter your email">
+	</div>
+	<div class="txtb">
+		<label>Phone Number: </label>
+		<input type="text" name="" value="" placeholder="Enter your phone number">
+	</div>
+	<div class="txtb">
+		<label>Feedback: </label>
+		<textarea></textarea>
+	</div>
+	<button onclick="send()">Send</button>
+	<script>
+	function send() {
+		alert("Thank You for your feedback!");
+	}
+	</script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script>
+			setTimeout(function(){
+				$('.loader_bg').fadeToggle();
+			}, 1500);
+	</script>
+  </form>
+	</div>
+</body>
+</html>
